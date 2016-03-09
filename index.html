@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>地理院ベクトルタイル提供実験（地形分類）</title>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="./TileLayer.GeoJSON.js"></script>
+<script src="./leaflet-hash.js"></script>
+<style>
+
+body {padding: 0; margin: 0;}
+html, body, #mapdiv {height: 100%; width: 100%;}
+.leaflet-container {background: #fff;}
+.gsi-div-icon {
+	background: none;
+	white-space: nowrap;
+	border:none;
+}
+</style>
+</head>
+<body>
+<div id="mapdiv">
+<script>
+
+//地形分類
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification/style.js', false);
+xhr.send(null);
+var stylejs = eval( "(" + xhr.responseText + ")" );
+
+var chikeilayer = new L.TileLayer.GeoJSON(
+'http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification/{z}/{x}/{y}.geojson',
+stylejs.options,stylejs.geojsonOptions);
+
+
+var std = L.tileLayer(
+'http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png',
+{attribution: "地理院タイル（標準地図）", 
+maxNativeZoom: 18, maxZoom: 18, opacity:1});
+var ort = L.tileLayer(
+'http://cyberjapandata.gsi.go.jp/xyz/djbmo/{z}/{x}/{y}.jpg',
+{attribution: "地理院タイル（写真）", 
+maxNativeZoom: 17, maxZoom: 18, opacity:0.7});
+
+
+
+var GSI = {
+	GLOBALS : {}
+};
+
+GSI.GLOBALS.map = L.map('mapdiv', {
+  center: [38.304419,141.059046], zoom: 14,minZoom: 2, maxZoom: 18,
+  layers: [chikeilayer,std]});
+
+L.control.scale({imperial: false}).addTo(GSI.GLOBALS.map);
+
+//var baseLayers = {"地理院タイル（標準地図）": std,"地理院タイル（オルソ）": ort,"地理院タイル（白地図）": blank};
+var baseLayers ={"地理院タイル（標準地図）": std,"地理院タイル（写真）": ort};
+var overlays = {'地形分類': chikeilayer};
+
+L.control.layers(baseLayers, overlays,{position:'topright',collapsed:false}).addTo(GSI.GLOBALS.map);
+var hash = L.hash(GSI.GLOBALS.map);
+</script>
+</body>
+</html>
