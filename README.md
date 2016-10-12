@@ -5,11 +5,11 @@ experimental_landformclassification
 土地条件調査によって得られた成果と脆弱地形調査によって得られたデータを合成し、GeoJSONタイルに変換したものを提供実験いたします。
 
 ## 地形分類
-テンプレートURL：
+- テンプレートURL：
 http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification/{z}/{x}/{y}.geojson
-サンプル：
+- サンプル：
 http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification/14/14555/6446.geojson
-ベクトルタイルスタイル定義：
+- ベクトルタイルスタイル定義：
 http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification/style.js
 
 # データについて
@@ -21,11 +21,9 @@ http://www.gsi.go.jp/bousaichiri/lfc_index.html
 
 # デモサイトについて
 デモサイトを次の場所に用意しております。
-
-本リポジトリ
+- 本レポジトリ
 http://gsi-cyberjapan.github.io/experimental_landformclassification/
-
-地理院地図
+- 地理院地図
 http://maps.gsi.go.jp/?ll=38.304419,141.059046&z=14&ls=experimental_landformclassification
 
 # 提供の位置づけ
