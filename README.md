@@ -1,6 +1,9 @@
 experimental_landformclassification
 ================
 国土地理院ベクトルタイル提供実験（地形分類）
+
+※ 現在、提供を停止しています。詳細は[国土地理院新着情報](http://www.gsi.go.jp/bousaichiri/bousaichiri40034.html)をご覧ください。
+
 # 地形分類の GeoJSON タイル
 土地条件調査によって得られた成果と脆弱地形調査によって得られたデータを合成し、GeoJSONタイルに変換したものを提供実験いたします。
 
