@@ -2,24 +2,30 @@ experimental_landformclassification
 ================
 国土地理院ベクトルタイル提供実験（地形分類）
 
-※ 現在、提供を停止しています。詳細は[国土地理院新着情報](http://www.gsi.go.jp/bousaichiri/bousaichiri40034.html)をご覧ください。
-
 # 地形分類の GeoJSON タイル
-土地条件調査によって得られた成果と脆弱地形調査によって得られたデータを合成し、GeoJSONタイルに変換したものを提供実験いたします。
+土地条件調査の成果、脆弱地形調査の成果及び治水地形分類図（更新版）を合成し、GeoJSONタイルに変換したものを提供実験いたします。
 
 ## 地形分類
-- テンプレートURL：
-http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification/{z}/{x}/{y}.geojson
+### テンプレートURL：
+- 地形分類（自然地形）
+http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/{z}/{x}/{y}.geojson
+- 地形分類（人工地形）
+http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification2/{z}/{x}/{y}.geojson
+
 - サンプル：
-http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification/14/14555/6446.geojson
-- ベクトルタイルスタイル定義：
-http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification/style.js
+http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/14/14555/6446.geojson
+
+### ベクトルタイルスタイル定義： 
+- 地形分類（自然地形） 
+http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/style.js
+- 地形分類（人工地形） 
+http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification2/style.js
 
 # データについて
 ズームレベル2～13のデータは、おおよその範囲図ですので、実データではありません。
-ズームレベル14のデータが実データです。
+ズームレベル14～16のデータが実データです。
 
-データ提供範囲とデータ仕様：
+- データ提供範囲とデータ仕様：
 http://www.gsi.go.jp/bousaichiri/lfc_index.html
 
 # デモサイトについて
@@ -27,7 +33,7 @@ http://www.gsi.go.jp/bousaichiri/lfc_index.html
 - 本レポジトリ
 http://gsi-cyberjapan.github.io/experimental_landformclassification/
 - 地理院地図
-http://maps.gsi.go.jp/?ll=38.304419,141.059046&z=14&ls=experimental_landformclassification
+http://maps.gsi.go.jp/#14/38.304419/141.059046/&base=std&ls=std%7Cexperimental_landformclassification1%7Cexperimental_landformclassification2
 
 # 提供の位置づけ
 国土地理院ベクトルタイル提供実験におけるデータの提供の位置づけは次のとおりです。
@@ -38,4 +44,5 @@ http://maps.gsi.go.jp/?ll=38.304419,141.059046&z=14&ls=experimental_landformclas
 - 本提供実験の利用により生じた損失及び損害等について、国土地理院はいかなる責任も負わないものとします。
 
 # 履歴
-2016-03-09 地形分類の提供実験を開始
+2016-03-09 地形分類の提供実験を開始  
+2017-03-29「地形分類（自然地形）」及び「地形分類（人工地形）」の提供実験を開始。
