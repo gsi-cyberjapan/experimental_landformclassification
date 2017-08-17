@@ -6,8 +6,8 @@
 
 <title>地理院ベクトルタイル提供実験（地形分類）</title>
 
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.3/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@0.7.3/dist/leaflet.js"></script>
 <script src="./TileLayer.GeoJSON.js"></script>
 <script src="./leaflet-hash.js"></script>
 
@@ -30,33 +30,33 @@
 <script>
 // 地形分類（自然地形）
 var xhr1 = new XMLHttpRequest();
-xhr1.open("GET", "http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/style.js", false);
+xhr1.open("GET", "https://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/style.js", false);
 xhr1.send(null);
 var stylejs1 = eval( "(" + xhr1.responseText + ")" );
 
 var chikeilayer1 = new L.TileLayer.GeoJSON(
-  "http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/{z}/{x}/{y}.geojson",
+  "https://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/{z}/{x}/{y}.geojson",
   stylejs1.options, stylejs1.geojsonOptions
 );
 
 // 地形分類（人工地形）
 var xhr2 = new XMLHttpRequest();
-xhr2.open("GET", "http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification2/style.js", false);
+xhr2.open("GET", "https://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification2/style.js", false);
 xhr2.send(null);
 var stylejs2 = eval( "(" + xhr2.responseText + ")" );
 
 var chikeilayer2 = new L.TileLayer.GeoJSON(
-  "http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification2/{z}/{x}/{y}.geojson",
+  "https://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification2/{z}/{x}/{y}.geojson",
   stylejs2.options, stylejs2.geojsonOptions
 );
 
 // 標準地図、写真
 var std = L.tileLayer(
-  "http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
+  "https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
   {attribution: "地理院タイル（標準地図）", maxNativeZoom: 18, maxZoom: 18, opacity:1}
 );
 var ort = L.tileLayer(
-  "http://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+  "https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
   {attribution: "地理院タイル（写真）", maxNativeZoom: 18, maxZoom: 18, opacity:0.9}
 );
 
