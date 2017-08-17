@@ -8,18 +8,18 @@ experimental_landformclassification
 ## 地形分類
 ### テンプレートURL：
 - 地形分類（自然地形）
-http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/{z}/{x}/{y}.geojson
+https://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/{z}/{x}/{y}.geojson
 - 地形分類（人工地形）
-http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification2/{z}/{x}/{y}.geojson
+https://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification2/{z}/{x}/{y}.geojson
 
 - サンプル：
-http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/14/14555/6446.geojson
+https://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/14/14555/6446.geojson
 
 ### ベクトルタイルスタイル定義： 
 - 地形分類（自然地形） 
-http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/style.js
+https://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/style.js
 - 地形分類（人工地形） 
-http://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification2/style.js
+https://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification2/style.js
 
 # データについて
 ズームレベル2～13のデータは、おおよその範囲図ですので、実データではありません。
@@ -31,9 +31,9 @@ http://www.gsi.go.jp/bousaichiri/lfc_index.html
 # デモサイトについて
 デモサイトを次の場所に用意しております。
 - 本レポジトリ
-http://gsi-cyberjapan.github.io/experimental_landformclassification/
+https://gsi-cyberjapan.github.io/experimental_landformclassification/
 - 地理院地図
-http://maps.gsi.go.jp/#14/38.304419/141.059046/&base=std&ls=std%7Cexperimental_landformclassification1%7Cexperimental_landformclassification2
+https://maps.gsi.go.jp/#14/38.304419/141.059046/&base=std&ls=std%7Cexperimental_landformclassification1%7Cexperimental_landformclassification2
 
 # 提供の位置づけ
 国土地理院ベクトルタイル提供実験におけるデータの提供の位置づけは次のとおりです。
