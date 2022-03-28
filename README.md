@@ -22,7 +22,12 @@ https://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification1/style.
 https://cyberjapandata.gsi.go.jp/xyz/experimental_landformclassification2/style.js
 
 # データについて
-ズームレベル2～13のデータは、おおよその範囲図ですので、実データではありません。
+「地形分類（自然地形）」は、ZL5～16において実データが表示されます。
+
+「諸元情報（自然地形『詳細版』）」は、ズームレベル4～13のデータは、
+おおよその範囲図ですので、実データではありません。
+
+「地形分類（人工地形）」は、ズームレベル4～13のデータは、おおよその範囲図ですので、実データではありません。
 ズームレベル14～16のデータが実データです。
 
 - データ提供範囲とデータ仕様：
